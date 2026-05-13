@@ -1,12 +1,14 @@
 import fs from "fs";
 import eleventyAutoCacheBuster from "eleventy-auto-cache-buster";
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img"
 
 /**
+ * 
  * Additional eleventy configuration
  * @param {import('@11ty/eleventy').UserConfig} eleventyConfig
  */
 export default function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("./**/*.png");
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin);
   eleventyConfig.addPlugin(eleventyAutoCacheBuster);
 
     eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {

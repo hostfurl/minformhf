@@ -23,8 +23,9 @@
   },
   "dependencies": {
     "@11ty/eleventy": "^4.0.0-alpha.6",
+    "@11ty/eleventy-img": "^6.0.4",
     "@11ty/eleventy-navigation": "^1.0.5",
-    "@anyblades/blades": "^0.28.0-alpha.2",
+    "@anyblades/blades": "^2.2.0",
     "@anyblades/eleventy-blades": "^0.28.0-beta.3",
     "@anyblades/pico": "^2.2.0-alpha.5",
     "@tailwindcss/cli": "^4.2.1",
