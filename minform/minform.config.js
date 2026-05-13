@@ -6,8 +6,15 @@ import eleventyAutoCacheBuster from "eleventy-auto-cache-buster";
  * @param {import('@11ty/eleventy').UserConfig} eleventyConfig
  */
 export default function (eleventyConfig) {
+  eleventyConfig.addPassthroughCopy("./**/*.png");
   eleventyConfig.addPlugin(eleventyAutoCacheBuster);
 
+    eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
+		if(data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
+			return false;
+		}
+	});  
+  
   eleventyConfig.addFilter("dataNavigation", function (nav) {
     return {
       title: this.ctx.site.title,

@@ -18,6 +18,14 @@ footer: |-
 #corsprod: set true to uses cors in production
 corsprod: false
 
+#if using htmx then optionally supress htmx headers, leave as commented unless necessary
+#if set to true make sure nohtmx is not set to true to continue to use htmx
+#nohtmxheaders: true
+
+#nohtmx: set to true instead if nohtmxheaders set to true does not fix form submssion failure, otherwise set to false or convert to comment
+#nohtmx: true
+
+
 #corsurl: set to server url if using cors, otherwise leave empty or as comment
 # Hostfurl does not permit cors, so leave blank
 corsurl:
