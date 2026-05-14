@@ -1,10 +1,10 @@
-import fs from "fs";
-import eleventyAutoCacheBuster from "eleventy-auto-cache-buster";
+import fs from "fs"
+import eleventyAutoCacheBuster from "eleventy-auto-cache-buster"
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img"
+import {format} from "date-fns"
 
 /**
- * 
- * Additional eleventy configuration
+  * Additional eleventy configuration
  * @param {import('@11ty/eleventy').UserConfig} eleventyConfig
  */
 export default function (eleventyConfig) {
@@ -52,4 +52,9 @@ export default function (eleventyConfig) {
   eleventyConfig.addShortcode("npm_package_version", function () {
     return process.env.npm_package_version;
   });
+
+  eleventyConfig.addFilter("displayDate", (dateObj) => {
+    return format(dateObj, 'MMM do yyyy')
+  });  
+
 }
