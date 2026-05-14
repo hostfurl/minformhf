@@ -39,8 +39,10 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addFilter("addformurl", function (contact, formurl) {
     let urlpath = formurl.formpath;
-    if (formurl.corsprod == "true" || formurl.prod == "false" || !formurl.prod) urlpath = formurl.corsurl + urlpath;
-    return { ...contact, ...{ urlpath: urlpath } };
+    if (formurl.corsprod?.toLowerCase() == "true" || formurl.prod?.toLowerCase() == "false" || !formurl.prod) urlpath = formurl.corsurl + urlpath;
+    let nohtmx = formurl.nohtmx
+    let nohtmxheaders = formurl.nohtmxheaders
+    return { ...contact, ...{ urlpath, nohtmx, nohtmxheaders} }
   });
 
   eleventyConfig.addShortcode("source", function (file) {
@@ -55,6 +57,6 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addFilter("displayDate", (dateObj) => {
     return format(dateObj, 'MMM do yyyy')
-  });  
+  });
 
 }
