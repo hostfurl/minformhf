@@ -13,8 +13,8 @@
 {% endset %}
 
 {% block body %}
- {%- set nav_pages = collections.all | eleventyNavigation | dataNavigation %}
- {%- renderFile '_includes/nav.liquid', nav_pages  %}
+  {%- set nav_pages = collections.all | eleventyNavigation | dataNavigation %}
+  {%- renderFile '_includes/nav.liquid', nav_pages  %}
   <main class="container breakout-all">
       {{ content | safe }}
   </main>
