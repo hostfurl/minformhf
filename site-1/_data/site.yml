@@ -13,7 +13,7 @@ scripts:
 
 footer: |-
   Please replace this website or edit it from source. This version generated from source at <a href="https://github.com/hostfurl/minformhf" target="_blank">Minformhf</a>
-  v{% npm_package_version %}.
+  v{% npm_package_version %}. If you have requested CMS CI/CD then content can be created and edited from [admin](/admin), afer login.
 
 #corsprod: set true to uses cors in production
 corsprod: false
