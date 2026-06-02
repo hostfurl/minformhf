@@ -12,8 +12,7 @@ scripts:
   - https://cdn.jsdelivr.net/npm/htmx.org@2.0.8/dist/htmx.min.js
 
 footer: |-
-  Please replace this website or edit it from source. This version generated from source at <a href="https://github.com/hostfurl/minformhf" target="_blank">Minformhf</a>
-  v{% npm_package_version %}. If you have requested CMS CI/CD then content can be created and edited from [admin](/admin), after login.
+  Please replace this website or edit it from source. This version generated from source at [Minformhf](https://github.com/hostfurl/minformhf) v{% npm_package_version %}. If you have requested CMS CI/CD then content can be created and edited from [admin](/admin), after login.
 
 #corsprod: set true to uses cors in production
 corsprod: false
