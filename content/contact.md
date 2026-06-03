@@ -1,6 +1,7 @@
 ---
-summary: Contact form
 title: Contact
+description: Contact form
+summary: Contact form
 navorder: 2
 
 eleventyComputed:

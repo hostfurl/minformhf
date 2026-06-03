@@ -1,6 +1,7 @@
 ---
 eleventyComputed:
-    summary: "{{ site.description }}"
+    description: "{{ site.description }}"
+    summary: "{{ description }}"
 ---
 # {{ site.title }}
 
