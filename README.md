@@ -1,17 +1,41 @@
 
 # Minformhf
 
+## Website template starter with markdown and contact forms
+
+Adds usable contact/subscription/unsubscription forms for your hosting sites with [Hostfurl](https://hostfurl.com).
+
+## Blog Features
+
+See [Blog Features](https://github.com/johnheenan/minform#blog-features)
+
+## Developer UX Philosophy
+
+Promote developer UX (user experience) escape hatches to frustrating static web site development. Allow simple forms to email.
+
+See [The Conditions the Developer UX Philosophy Escapes From](https://github.com/johnheenan/minform#the-conditions-the-developer-ux-philosophy-escapes-from)
+
+
+## CI/CD
+
+The magic that makes for a great UX (user experience) is CI/CD (Continuous Integration/Continuous Deployment or Delivery) with web pages written in Markdown.
+
+The sole change for a Hostfurl shell for CI/CD to work is the insertion of a one line public key in the `~/.ssh/authorized_keys` file.
+
+Hostfurl is aware for customers to set up CI/CD independent of their hosting provider is a frustrating experience that requires a lot of experience.
+
+While Hostfurl has developed software than can provision CI/CD for individual customers, this CI/CD provisioning software is not ready yet to be integrated into the billing system and server hosting sofTware.
+
+The intention is to make it the CI/CD provisioning software flexible enough to stand alone at an admin level and allow as little surface level as necessary to integrate with the billing system and server hosting software.
+
+In the meantime, Hostfurl customer are welcome to request their hosting site be integrate into through https://my.hostfurl.com on a free trial basis for CMS CI/CD purposes only.
+
+
 ## Migration to Forgejo Git Server warning
 
 If you migrate this repository to a Forgejo Git server then it will attempt to start a Forgejo Action. Public examples of Forgejo servers are https://codeberg.org/ and https://codefloe.com/
 
 There is a mechanism to place in place to stop the Forgejo Action early. Forgejo Actions should be disabled following migration until further setup.
-
-More information to follow.
-
-## Website template starter with markdown and contact forms
-
-Adds usable contact/subscription/unsubscription forms for your hosting sites with [Hostfurl](https://hostfurl.com).
 
 ## Usage
 
@@ -23,6 +47,7 @@ To edit site and upload changes:
 - `npm install`
 - `npm start`
 - Browse to link
+- If using CMS CI/CD, please see `.env.sample` and make sure any `.env` file is included in `.gitignore`. While the information is not really secret, it is good practice and will avoid getting automated warnings. 
 - Edit site as you wish
 - The site footer can be edited in _data/site.yml
 - Hostfurl hosting does not support cors, so testing forms without uploading changes will not work
@@ -30,7 +55,7 @@ To edit site and upload changes:
 
 ## Updates
 
-- `npm update` updates packages
+- `npm update --save` updates packages
 
 ## Prerequesites
 

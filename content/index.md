@@ -6,4 +6,3 @@ eleventyComputed:
 # {{ site.title }}
 
 ## {{ summary }}
-
